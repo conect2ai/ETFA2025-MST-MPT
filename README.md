@@ -93,6 +93,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 --- 
 
-# Sobre nós
+# 🌎 About Conect2AI
 
 The [**Conect2AI**](http://conect2ai.dca.ufrn.br) research group is composed of undergraduate and graduate students from the Federal University of Rio Grande do Norte (UFRN) and aims to apply Artificial Intelligence (AI) and Machine Learning in emerging areas. Our expertise includes Embedded Intelligence and IoT, optimizing resource management and energy efficiency, contributing to sustainable cities. In the energy transition and mobility, we apply AI to optimize energy use in connected vehicles and promote more sustainable mobility.
