@@ -6,26 +6,26 @@
 
 &nbsp;
 
-# Incremental Anomaly Detection in Multivariate Time Series for IoT Devices with a TinyML Approac
+# MST and MPT: Lightweight Incremental Algorithms for Multivariate Anomaly Detection and Correction on TinyML Devices
 
 ### ✍🏾Authors: [Morsinaldo Medeiros](https://github.com/Morsinaldo), [Marianne Diniz](https://github.com/MarianneDiniz), [Ivanovitch Silva](https://github.com/ivanovitchm), [Massimiliano Gaffurini](https://scholar.google.com.br/citations?user=s6ZkzYYAAAAJ&hl=en&authuser=1&oi=ao), [Dennis Brandão](https://scholar.google.com.br/citations?user=OxSKwvEAAAAJ&hl=en&authuser=1), [Paolo Ferrari](https://scholar.google.com.br/citations?user=-BIQbXMAAAAJ&hl=en&authuser=1)
 
 ## 1. Abstract/Overview
 
-The Internet of Things (IoT) has led to the widespread generation of multivariate time series that require real-time anomaly detection to ensure the reliability of monitoring and control processes. However, traditional methods based on offline training and batch processing are unsuitable for embedded devices, which operate under memory, computational, and energy constraints. To address these challenges, this work proposes two lightweight incremental algorithms derived from the TEDARLS framework. Both algorithms operate without prior training, updating their internal statistics in real-time, and are optimized for TinyML platforms. A case study was conducted in two stages, the models were first evaluated offline in a Python environment to analyze detection accuracy, correction behavior, and computational efficiency; subsequently, the algorithms were embedded on a Freematics One+ device connected to vehicles via the On-Board Diagnostics II (OBD-II) interface. MSTEDARLS achieved approximately 99% precision and 100% recall with inference times around 500 microsseconds, maintaining the original data characteristics. MPTEDARLS, although more sensitive to multivariate patterns, induced greater distortions and required processing times exceeding 4,200 microsseconds. Overall, MSTEDARLS demonstrated better stability and is more suitable for real-time anomaly correction in resource-constrained IoT edge applications.
+The Internet of Things (IoT) generates massive multivariate time series data that requires real-time anomaly detection and correction to ensure reliable monitoring and control. However, conventional methods relying on offline training and batch processing are impractical for embedded IoT devices due to their severe memory, processing, and energy constraints. To address this gap, we propose two lightweight incremental learning algorithms: Multivariate Sequential TEDA with RLS Correction (MST) and Multivariate Parallel TEDA with RLS (MPT), both derived from the TEDARLS framework, which enable on-device detection and correction of multivariate anomalies within the constraints of TinyML resources. Both algorithms operate without prior training, continuously updating internal statistics in real-time to identify outliers and apply immediate corrections. In experiments using real vehicular sensor data on a TinyML microcontroller, MST achieved approximately 99% precision and 100% recall with inference times around 500μs, while preserving the original data characteristics. MPT, although more sensitive to multivariate patterns, introduced greater signal distortions and required processing times exceeding 4,200μs. Overall, MST demonstrated superior stability and is more suitable for real-time anomaly correction in resource-constrained IoT environments. By enabling lightweight, accurate, and autonomous anomaly detection and correction directly at the edge, this approach addresses a critical gap in embedded analytics for IoT systems.
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
 ![PlatformIO](https://img.shields.io/badge/PlatformIO-ESP32-orange)
 ![Edge%20AI](https://img.shields.io/badge/Edge%20AI-Ready-green)
 
-This repository contains the source code and experimental materials associated with the MSTEDARLS (Multivariate Sequential TEDA-RLS) and MPTEDARLS (Multivariate Parallel TEDA-RLS) algorithms, developed for online anomaly detection and correction in multivariate vehicular data streams.
+This repository contains the source code and experimental materials associated with the MST (Multivariate Sequential TEDA-RLS) and MPT (Multivariate Parallel TEDA-RLS) algorithms, developed for online anomaly detection and correction in multivariate vehicular data streams.
 
 Both algorithms are designed to operate in real time, making them suitable for edge computing scenarios involving vehicular telemetry, such as OBD-II data acquisition.
 
 ## Repository Structure 📂
 
 - **`./Freematics/`** — Source code from the Freematics project used for the embedded experiments (ESP32, OBD-II communication, etc.).
-- **`./src/`** — Source code developed for MSTEDARLS and MPTEDARLS.
+- **`./src/`** — Source code developed for MST and MPT.
   - **`./src/cpp/`** — C++ implementations for embedded systems.
 - **`./data/`** — Datasets used for experiments, including preprocessed vehicular data.
 - **`./figures/`** — Figures generated for analysis and publication.
@@ -46,14 +46,14 @@ Each file contains the following variables:
 
 The datasets are organized as follows:
 - **Original data** — Vehicular signals without injected anomalies.
-- **Corrected data** — Data after processing with MSTEDARLS or MPTEDARLS.
+- **Corrected data** — Data after processing with MST or MPT.
 
 ## Getting Started 🚀
 
 ### 1️⃣ Cloning the Repository
 ```bash
-git clone https://github.com/conect2ai/ETFA2025-MSTEDARLS-MPTEDARLS.git
-cd ETFA2025-MSTEDARLS-MPTEDARLS
+git clone https://github.com/conect2ai/ETFA2025-MST-MPT.git
+cd ETFA2025-MST-MPT
 ```
 
 ### 2️⃣ Installing Dependencies
