@@ -8,7 +8,7 @@
 
 # Incremental Anomaly Detection in Multivariate Time Series for IoT Devices with a TinyML Approac
 
-### ✍🏾Authors: [Morsinaldo Medeiros](https://github.com/Morsinaldo), [Marianne Diniz](https://github.com/MarianneDiniz), [Ivanovitch Silva](https://github.com/ivanovitchm), [Dennis Brandão]()
+### ✍🏾Authors: [Morsinaldo Medeiros](https://github.com/Morsinaldo), [Marianne Diniz](https://github.com/MarianneDiniz), [Ivanovitch Silva](https://github.com/ivanovitchm), [Massimiliano Gaffurini](https://scholar.google.com.br/citations?user=s6ZkzYYAAAAJ&hl=en&authuser=1&oi=ao), [Dennis Brandão](https://scholar.google.com.br/citations?user=OxSKwvEAAAAJ&hl=en&authuser=1), Paolo Ferrari (https://scholar.google.com.br/citations?user=-BIQbXMAAAAJ&hl=en&authuser=1)
 
 ## 1. Abstract/Overview
 
@@ -87,7 +87,7 @@ Compile, upload, and monitor the serial (steps 1, 2, and 3, respectively, in the
 
 ---
 
-## :page_facing_up: Licença
+## :page_facing_up: License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
